@@ -1,0 +1,205 @@
+/**
+ * @name Official ReCord Theme
+ * @description This is a official ReCord theme
+ * @author Influence
+ * @version 1.0
+ * @source https://github.com/InfluenceDevs/ReCord-Theme
+ * @license MIT
+ * @requires Glasscord>=0.0.5
+ */
+
+/* =========================
+   GLASSCORD SETTINGS
+========================= */
+
+:root {
+  /* Platform blur */
+  --glasscord-win-blur: blurbehind;
+  --glasscord-win-performance-mode: true;
+  --glasscord-macos-vibrancy: fullscreen-ui;
+  --glasscord-linux-blur: true;
+  --glasscord-titlebar: windows;
+
+  /* Color system */
+  --rc-accent: 94, 129, 172;
+  --rc-link: 136, 192, 208;
+
+  /* Layers */
+  --rc-bg-main: rgba(46, 52, 64, 0.85);
+  --rc-bg-layer: rgba(46, 52, 64, 0.6);
+  --rc-bg-soft: rgba(46, 52, 64, 0.4);
+
+  /* States */
+  --rc-hover: rgba(129, 161, 193, 0.08);
+  --rc-active: rgba(129, 161, 193, 0.25);
+  --rc-selected: rgba(94, 129, 172, 0.2);
+
+  /* UI */
+  --rc-border: rgba(255, 255, 255, 0.06);
+  --rc-radius: 12px;
+  --rc-blur: 16px;
+
+  /* Server list */
+  --server-icon-size: 40px;
+  --server-icon-spacing: 8px;
+  --server-container-padding: 10px;
+}
+
+/* =========================
+   BASE
+========================= */
+
+body,
+.appMount-2yBXZl,
+.app-2CXKsg {
+  background: transparent !important;
+}
+
+/* =========================
+   GLASS LAYERS
+========================= */
+
+:is(.sidebar-2K8pFh,
+    .chat-2ZfjoI,
+    .container-2cd8Mz,
+    .members-3WRCEx,
+    .panels-3wFtMD) {
+  background: var(--rc-bg-layer) !important;
+  backdrop-filter: blur(var(--rc-blur));
+  border: 1px solid var(--rc-border);
+  border-radius: var(--rc-radius);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.theme-dark {
+  --background-primary: transparent;
+  --background-secondary: var(--rc-bg-layer);
+  --background-tertiary: var(--rc-bg-soft);
+  --background-floating: var(--rc-bg-main);
+
+  --text-normal: #e5e9f0;
+  --text-muted: #aab1c3;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.theme-light {
+  --background-primary: transparent;
+  --background-secondary: rgba(240, 240, 240, 0.6);
+  --background-tertiary: rgba(240, 240, 240, 0.4);
+  --background-floating: rgba(255, 255, 255, 0.8);
+
+  --text-normal: #202020;
+  --text-muted: #555;
+}
+
+/* =========================
+   SIDEBAR / SERVERS
+========================= */
+
+.wrapper-1Rf91z {
+  margin: var(--server-container-padding);
+  background: var(--rc-bg-main);
+  backdrop-filter: blur(var(--rc-blur));
+  border-radius: var(--rc-radius);
+}
+
+/* =========================
+   CHANNELS
+========================= */
+
+.containerDefault-YUSmu3:hover {
+  background: var(--rc-hover);
+  border-radius: 8px;
+}
+
+.selected-1-Z6gm {
+  background: var(--rc-selected) !important;
+  border-radius: 8px;
+}
+
+/* =========================
+   CHAT
+========================= */
+
+.chatContent-3KubbW,
+.messagesWrapper-3lZDfY {
+  background: transparent !important;
+}
+
+.message-2CShn3:hover {
+  background: var(--rc-hover);
+  border-radius: 10px;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.scrollableContainer-2NUZem {
+  background: var(--rc-bg-soft) !important;
+  border-radius: var(--rc-radius);
+  border: 1px solid var(--rc-border);
+  backdrop-filter: blur(calc(var(--rc-blur) / 2));
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.title-31SJ6t {
+  background: var(--rc-bg-main) !important;
+  backdrop-filter: blur(var(--rc-blur));
+  border-bottom: 1px solid var(--rc-border);
+}
+
+/* =========================
+   POPOUTS / MENUS
+========================= */
+
+.layer-2aCOJ3,
+.menu-1QACrS,
+.root-1CAIjD {
+  background: var(--rc-bg-layer) !important;
+  backdrop-filter: blur(var(--rc-blur));
+  border: 1px solid var(--rc-border);
+  border-radius: var(--rc-radius);
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rc-bg-soft);
+  border-radius: 10px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button:hover {
+  background: var(--rc-hover);
+}
+
+/* =========================
+   SMALL DETAILS
+========================= */
+
+.channelName-3KPsGw:hover {
+  color: rgb(var(--rc-accent));
+}
+
+.icon-2xnN2Y:hover {
+  color: rgb(var(--rc-accent));
+}
